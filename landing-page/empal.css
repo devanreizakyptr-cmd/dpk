@@ -1,0 +1,139 @@
+body {
+    font-family:"Georgia","Iowan Old Style",serif;
+}
+
+header{
+    padding-top: 1em;
+    padding-bottom: 2em;
+    background-color: #062b50;
+    border:#062b50 1px solid;
+    padding-right: 0 auto;
+    padding-right: 0 auto;
+    margin-bottom: 5em;
+}
+ h3{
+    text-align: justify;
+    color:rgb(30, 30, 30);
+}
+
+h1{
+    text-align: center;
+    color: white
+}
+
+article{
+    font-size: large;
+    padding: 0.1em;
+    margin-left: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+}
+
+.u {
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+}
+
+ figure {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            justify-content: center;
+            margin: 20px auto;      
+            text-align: center;     
+        }
+
+        figure img {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;     
+        }
+
+        
+        figcaption {
+            margin-top: 10px;
+            color: #555;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #062b50;
+            border:#062b50 1px solid;
+            color: white;
+            padding: 1.2em 0;
+        }
+
+.emp-box {
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    padding: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.emp-box h4 {
+    color: #062b50;
+}
+
+.emp-box p {
+    text-align: justify;
+}
+
+.back-wrapper {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.back-btn {
+    background-color: #062b50;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+}
+
+.back-btn:hover {
+    background-color: #0c4c8a;
+}
+
+/* ===== Galeri foto ===== */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 230px;
+    gap: 4px;
+    max-width: 800px;
+    margin: 0 auto 2em;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.galeri img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Baris atas: 3 gambar */
+.galeri img:nth-child(-n+3) {
+    grid-column: span 2;
+}
+
+/* Baris bawah: 2 gambar */
+.galeri img:nth-child(n+4) {
+    grid-column: span 3;
+}
+
+/* Responsif di HP */
+@media (max-width: 600px) {
+    .galeri img {
+        grid-column: span 6 !important;
+    }
+}
+
+.menjorok {
+    text-indent: 2em;
+  }

@@ -1,0 +1,155 @@
+:root{
+  --dark-navy:#062b50;
+  --navy-dark:#062b50;
+  --bisque: rgb(224, 229, 231);
+  --ink:#2B2320;
+  --muted:#6B6058;
+  --card-bg:#FFFFFF;
+  --page-bg:#F5F3EF;
+  --line:#E4DED4;
+}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-padding-top:env(safe-area-inset-top,0px);
+}
+
+body{
+  margin:0;
+  font-family:"Georgia","Iowan Old Style",serif;
+  background:var(--page-bg);
+  color:var(--ink);
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+header{
+  background:var(--dark-navy);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 40px;
+}
+header .brand{
+  font-size:1.15rem;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+header nav{
+  display:flex;
+  gap:28px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:.92rem;
+}
+
+header nav a{
+  color:#fff;
+  text-decoration:none;
+  opacity:.92;
+}
+
+header nav a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.hero{
+  background:var(--bisque);
+  text-align:center;
+  padding:70px 24px 60px;
+}
+.hero h1{
+  font-size:2.4rem;
+  margin:0 0 14px;
+  color:var(--ink);
+}
+.hero p{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#4A3F38;
+  max-width:520px;
+  margin:0 auto 26px;
+  font-size:.98rem;
+  line-height:1.5;
+}
+.btn{
+  display:inline-block;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--dark-navy);
+  color:#fff;
+  border:none;
+  padding:11px 22px;
+  border-radius:4px;
+  font-size:.9rem;
+  font-weight:700;
+  text-decoration:none;
+  cursor:pointer;
+}
+.btn:hover{
+  background:var(--navy-dark);
+}
+
+main{
+  max-width:960px;
+  margin:0 auto;
+  padding:56px 24px 70px;
+}
+
+section + section{
+  margin-top:56px;
+}
+
+section h2{
+  text-align:center;
+  font-size:1.3rem;
+  margin:0 0 28px;
+  color:var(--ink);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card{
+  background:var(--card-bg);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:24px 22px;
+  text-align:center;
+}
+.card h3{
+  font-size:1.02rem;
+  color:var(--maroon);
+  margin:0 0 10px;
+}
+.card p{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:.85rem;
+  color:var(--muted);
+  line-height:1.55;
+  margin:0 0 18px;
+}
+.card .btn{
+  padding:9px 16px;
+  font-size:.82rem;
+}
+
+footer{
+  background:var(--navy-dark);
+  color:#f8f6f3;
+  text-align:center;
+  padding:20px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:.8rem;
+}
+
+@media (max-width:720px){
+  header{padding:14px 20px;}
+  header nav{gap:14px;font-size:.82rem;}
+  .grid{grid-template-columns:1fr;}
+  .hero{padding:50px 20px 44px;}
+  .hero h1{font-size:1.7rem;}
+}
